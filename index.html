@@ -302,7 +302,6 @@
         var cost = imageCosts[selectedAttraction];
         if (cost) {
             contador -= cost;
-            localStorage.setItem('contador', contador);
             document.getElementById("contador").innerText = contador;
         }    
 
@@ -317,15 +316,12 @@
 
     <script>
         var password = "Cholely1825";
-        var contador = localStorage.getItem('contador') ? parseInt(localStorage.getItem('contador')) : 0;
-        document.getElementById("contador").innerText = contador;
 
         function cambiarContador() {
             var userPassword = prompt("Por favor, introduce la contraseña:");
             if (userPassword === password) {
                 var nuevoContador = prompt("Introduce el nuevo valor del contador:");
                 contador = parseInt(nuevoContador);
-                localStorage.setItem('contador', contador);
                 document.getElementById("contador").innerText = contador;
             } else {
                 alert("Contraseña incorrecta.");
