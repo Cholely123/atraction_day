@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atraction_Day</title>
     <style>
     body {
@@ -113,6 +115,7 @@
     <div id="attraction-type"></div>
 
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
     <script>
     var selectedAttraction = null;
 
@@ -196,6 +199,27 @@
         "la muerte 2.0": "Tipo de atracción: Columpio",
         "los volandos": "Tipo de atracción: Columpio",
     };
+
+        <span id="contador">0</span></h1>
+    <button onclick="incrementar()">Incrementar</button>
+    <button onclick="decrementar()">Decrementar</button>
+
+    <script>
+        let contador = 0;
+
+        function actualizarContador() {
+            document.getElementById("contador").textContent = contador;
+        }
+
+        function incrementar() {
+            contador++;
+            actualizarContador();
+        }
+
+        function decrementar() {
+            contador--;
+            actualizarContador();
+        }
 
     var images = document.querySelectorAll('#image-selector img');
     images.forEach(function(img) {
